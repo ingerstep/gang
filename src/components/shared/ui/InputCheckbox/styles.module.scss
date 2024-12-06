@@ -1,0 +1,39 @@
+@import '@src/styles/vars.scss';
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+
+    input {
+        display: none;
+
+        &:checked~.checkmark {
+            background-color: #898989;
+        }
+    }
+
+    .checkmark {
+        transition: all 0.5s;
+        width: 14px;
+        height: 14px;
+        background-color: transparent;
+        border: 2px solid #898989;
+        border-radius: 4px;
+
+        &.rounded {
+            border-radius: 100%;
+        }
+    }
+
+    &.error {
+        p {
+            color: #d01c2f;
+        }
+
+        .checkmark {
+            border: 2px solid #d01c2f;
+        }
+    }
+}

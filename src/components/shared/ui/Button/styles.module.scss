@@ -1,0 +1,27 @@
+@import '@src/styles/vars.scss';
+
+.button {
+  border-radius: 16px;
+  padding: 6px 24px;
+  transition: all 0.5s;
+  width: fit-content;
+
+  &-white {
+    background: #eee;
+    border: 2px solid rgba(148, 148, 148, 0.3);
+  }
+
+  &-black {
+    background: #101010;
+    border: 2px solid rgba(148, 148, 148, 0.3);
+    border-radius: 8px;
+  }
+
+  &:hover {
+    border: 2px solid rgba(148, 148, 148, 0.6);
+  }
+
+  &:focus {
+    border: 2px solid rgba(148, 148, 148, 1);
+  }
+}

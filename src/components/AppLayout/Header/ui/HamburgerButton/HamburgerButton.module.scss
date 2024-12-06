@@ -1,0 +1,61 @@
+@import '@src/styles/vars.scss';
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  position: relative;
+  transform: rotate(0deg);
+  border: 2px solid $red;
+  border-radius: 100%;
+  cursor: pointer;
+  z-index: 3000;
+}
+
+.button span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 60%;
+  background: $red;
+  border-radius: 2px;
+  opacity: 1;
+  left: 50%;
+  transform: rotate(0deg) translateX(-50%);
+  transition: 0.25s ease-in-out;
+}
+
+/* Icon 4 */
+.button span:nth-child(1) {
+  top: 16px;
+  transform-origin: left center;
+}
+
+.button span:nth-child(2) {
+  top: 25px;
+  transform-origin: left center;
+}
+
+.button span:nth-child(3) {
+  top: 34px;
+  transform-origin: left center;
+}
+
+.button.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 15px;
+  left: 16px;
+}
+
+.button.active span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.button.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 37px;
+  left: 15px;
+}

@@ -1,0 +1,53 @@
+@import '@src/styles/vars.scss';
+
+.intro {
+  display: flex;
+  min-height: 100vh;
+  gap: 30px;
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    font-weight: 400;
+  }
+
+  .title__container {
+    position: relative;
+  }
+
+  .title__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: inherit;
+    position: relative;
+    z-index: 2000;
+  }
+
+  &__subtitle {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    z-index: 1;
+  }
+
+  &__text,
+  &__text1 {
+    opacity: 0.8;
+    position: absolute;
+  }
+
+  &__text {
+    top: -20px;
+    left: -10px;
+  }
+
+  &__text1 {
+    bottom: -15px;
+    right: 50px;
+  }
+
+  &__desc {
+    max-width: 415px;
+    padding-bottom: 20px;
+  }
+}

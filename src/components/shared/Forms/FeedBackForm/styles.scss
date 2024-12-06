@@ -1,0 +1,12 @@
+form.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+    row-gap: 8px;
+
+    @media screen and (max-width: $display-tablet) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

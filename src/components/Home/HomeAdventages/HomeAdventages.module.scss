@@ -1,0 +1,67 @@
+.homeadventages {
+  position: relative;
+  background: #101010;
+  overflow-y: auto;
+  height: 100vh;
+  pointer-events: none;
+
+  svg {
+    width: 250vw;
+  }
+
+
+  &::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+.row {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.overlay {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  pointer-events: none;
+
+  &__shadow {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 120vh;
+    transform: translateY(-20px);
+    // background: red;
+    box-shadow: 0px -80px 150px 45vh #101010 inset;
+  }
+}
+
+.panel {
+  width: 300vw;
+  height: 100vh;
+}
+
+.zone {
+  display: grid;
+  grid-template-columns: 100vw 100vw 100vw;
+  // background: linear-gradient(90deg, rgba(18,18,18,1) 0%, rgba(37,37,46,1) 35%, rgba(26,30,31,1) 100%);
+}

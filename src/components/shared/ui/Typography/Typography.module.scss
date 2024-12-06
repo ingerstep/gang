@@ -1,0 +1,124 @@
+$black: #101010;
+$black2: #444444;
+$gray: #2f2f2f;
+$gray2: #898989;
+$gray3: #e1e1e1;
+$white: #eee;
+
+.font-montserrat {
+  font-family: var(--font-montserrat);
+}
+
+.font-rostov {
+  font-family: 'Rostov';
+}
+
+.black {
+  color: $black;
+}
+
+.black2 {
+  color: $black2;
+}
+
+.gray {
+  color: $gray;
+}
+
+.gray2 {
+  color: $gray2;
+}
+
+.gray3 {
+  color: $gray3;
+}
+
+.white {
+  color: $white;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+
+.s120 {
+  font-size: 120px;
+  line-height: normal;
+}
+
+.s80 {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.s40 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.s32 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.s20 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.s16 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.s14 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.s12 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media all and (min-width: 320px) and (max-width: 1023px) {
+  .s120 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .s40 {
+    font-size: 24px;
+    line-height: normal;
+    font-weight: 700;
+  }
+
+  .s32 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .s20 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+  }
+}

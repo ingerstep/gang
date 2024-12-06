@@ -1,0 +1,36 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 30px;
+
+  &_col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 240px;
+    // background: red;
+  }
+
+  &_nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &_info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &_grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  &_flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

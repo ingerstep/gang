@@ -1,0 +1,69 @@
+@import '@src/styles/vars.scss';
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: $black;
+  z-index: 1000;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    height: 100vh;
+  }
+
+  &__shadow {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background: red;
+    z-index: 10000;
+    box-shadow: 0px 5px 100px 50px $black inset;
+  }
+}
+
+.chipses {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 22px;
+}
+
+.btn {
+  transition: all 0.5s;
+  font-weight: 100;
+  &:hover {
+    color: $red;
+  }
+}
+
+.service {
+}
+
+.column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.center {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  // background: red;
+}

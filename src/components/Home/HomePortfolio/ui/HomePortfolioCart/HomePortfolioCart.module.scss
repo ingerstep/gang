@@ -1,0 +1,111 @@
+.cart {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  position: relative;
+  height: 400px;
+  width: 45vw;
+  padding: 32px;
+  gap: 16px;
+  border-radius: 40px;
+  background: #eee;
+  overflow: hidden;
+
+  .collapse {
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(.87, -0.01, .57, .98);
+    transition-delay: 0.5s;
+    height: 0;
+  }
+
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    border-radius: 0 40px 40px 0;
+    overflow: hidden;
+    filter: brightness(1);
+    width: 100%;
+    transition: all 0.5s cubic-bezier(.87, -0.01, .57, .98);
+
+    img {
+      border-radius: 0 40px 40px 0;
+      height: 500px;
+      width: 100%;
+      object-position: left;
+      pointer-events: none;
+    }
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 8px;
+    z-index: 2;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 2;
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  .tag {
+    width: fit-content;
+    padding: 4px 8px;
+    background: rgba($color: #eee, $alpha: 0.8);
+    border-radius: 4px;
+  }
+
+  .title {
+    transition: all 1s;
+    margin-bottom: 20px;
+  }
+
+  &:hover {
+    .bg {
+      width: 40%;
+      filter: brightness(0.8);
+    }
+
+    .title {
+      color: #040102,
+    }
+
+    .collapse {
+      height: 100%;
+    }
+  }
+
+  &:not(:hover) {
+    .bg {
+      transition-delay: 0.5s;
+    }
+
+    .title {
+      transition-delay: 0.5s;
+    }
+
+    .collapse {
+      transition-delay: 0s;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    width: 80vw;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 85vw;
+  }
+}

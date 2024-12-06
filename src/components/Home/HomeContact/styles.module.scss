@@ -1,0 +1,88 @@
+@import '@src/styles/vars.scss';
+
+.contact {
+  position: relative;
+  z-index: 1000;
+  padding: 32px 0;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    background: $offwhite;
+    border-radius: 8px;
+    transition: all 0.5s;
+
+    &__bottom {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      height: 100%;
+    }
+
+    p {
+      text-align: right;
+    }
+
+    h1, p, path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      background: $red;
+
+      h1, p {
+        color: #eee;
+      }
+
+      svg {
+        path {
+          fill: #eee
+        }
+      }
+    }
+  }
+
+  &_subtitle {
+    margin-top: 16px;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0 60px 0;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $black;
+    padding: 20px 0 0 0;
+  }
+}
+
+.elem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  &.map {
+    border-radius: 40px;
+    overflow: hidden;
+    padding: 0;
+  }
+}

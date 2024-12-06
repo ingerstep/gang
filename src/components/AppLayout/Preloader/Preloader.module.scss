@@ -1,0 +1,18 @@
+@import '@src/styles/vars.scss';
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $black;
+  z-index: 20000;
+  transition: all 1s;
+  transition-delay: 0.5s;
+  pointer-events: none;
+}

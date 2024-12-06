@@ -1,0 +1,45 @@
+@import '@src/styles/vars.scss';
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+    gap: 24px;
+}
+
+.header {
+    display: flex;
+    gap: 8px;
+
+    &_logo {
+        max-width: 70px;
+        width: 100%;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &_title {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 0 auto;
+    gap: 20px;
+    width: fit-content;
+
+    @media screen and (max-width: $display-mobile) {
+      flex-direction: column;
+      gap: 16px;
+     
+    }
+}

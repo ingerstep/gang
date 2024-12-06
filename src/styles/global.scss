@@ -1,0 +1,105 @@
+@import '@src/styles/vars.scss';
+
+@font-face {
+  font-family: 'Rostov';
+  src: url('../assets/fonts/rostov.woff2') format('woff2'), url('../assets/fonts/rostov.woff') format('woff'),
+    url('../assets/fonts/rostov.ttf') format('truetype');
+}
+body {
+  overflow: hidden;
+}
+body,
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: $black;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 0px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $red;
+    border-radius: 10px;
+  }
+}
+
+#__next,
+main {
+  height: 100%;
+}
+
+div,
+input {
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.block {
+  width: 100vw;
+  height: 100vh;
+  background: $black;
+}
+
+.collapse {
+  overflow: hidden;
+  height: 0;
+}
+
+.title {
+  padding-bottom: 20px;
+}
+
+#content {
+  overflow-x: hidden;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: all 500ms ease-in-out;
+  z-index: 10000;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+[class*='ymaps-2'][class*='-copyrights-pane'] {
+  display: none;
+}
+
+[class*='ymaps-2'][class*='-ground-pane'] {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  -webkit-filter: grayscale(100%);
+}
